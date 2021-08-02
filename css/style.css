@@ -1,0 +1,139 @@
+html {
+  box-sizing: initial;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ff7a7a;
+  background-image: url("/images/bg-intro-mobile.png");
+  font-family: "Poppins", sans-serif;
+}
+
+.__free {
+  width: 20.625rem;
+  height: 5.625rem;
+  margin: auto auto 1.5rem auto;
+  border-radius: 0.5rem;
+  background-color: #6055a5;
+  box-shadow: 0px 5px 0px rgba(62, 60, 73, 0.5);
+}
+
+.__free .__free-text {
+  width: 70%;
+  padding: 1rem 3rem;
+  margin: 0;
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.__free:hover {
+  transform: scale(1.025);
+}
+
+form {
+  width: 20.625rem;
+  margin: auto auto 3rem auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 0px rgba(62, 60, 73, 0.5);
+}
+
+form ul {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+}
+
+form ul li {
+  width: 17.5rem;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+form input {
+  width: 100%;
+  padding: 1rem 0;
+  font-family: inherit;
+  border: 1px solid #b9b6d3;
+  border-radius: 0.35rem;
+}
+
+form input::placeholder {
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+form .__submit {
+  width: 100%;
+  height: 3.25rem;
+  padding: 0;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  background-color: #38cc8c;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0px 5px 2px #38cc8c;
+}
+
+form .__submit:hover {
+  transform: scale(1.025);
+}
+
+form .__terms-and-service {
+  width: 85%;
+  margin: auto;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #b9b6d3;
+}
+
+form .__terms-and-service a {
+  text-decoration: none;
+  color: red;
+  font-weight: 700;
+}
+
+form .__terms-and-service a:visited {
+  color: #6055a5;
+}
+
+.__description {
+  max-width: 90%;
+  margin: auto;
+}
+
+.__description .__container {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+}
+
+.__description .__container .__title {
+  width: 15rem;
+  margin-top: 5.25rem;
+  color: white;
+  text-align: center;
+}
+
+.__description .__container .__text {
+  width: 19.625rem;
+  margin: 0 auto 4.375rem auto;
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=style.css.map */

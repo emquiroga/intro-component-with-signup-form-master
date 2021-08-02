@@ -1,0 +1,24 @@
+.__description {
+  max-width: 90%;
+  margin: auto;
+
+  .__container {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+
+    .__title {
+      width: 15rem;
+      margin-top: 5.25rem;
+      color: white;
+      text-align: center;
+    }
+    .__text {
+      width: 19.625rem;
+      margin: 0 auto 4.375rem auto;
+      color: white;
+      text-align: center;
+      opacity: 0.9;
+    }
+  }
+}
