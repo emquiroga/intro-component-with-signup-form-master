@@ -19,6 +19,23 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main {
+  display: flex;
+  flex-flow: wrap column;
+}
+
+@media (min-width: 40em) {
+  main {
+    flex-flow: wrap row;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 .__free {
   width: 20.625rem;
   height: 5.625rem;
@@ -26,6 +43,14 @@ body {
   border-radius: 0.5rem;
   background-color: #6055a5;
   box-shadow: 0px 5px 0px rgba(62, 60, 73, 0.5);
+}
+
+@media (min-width: 40em) {
+  .__free {
+    width: 34rem;
+    height: 3.75rem;
+    margin-top: 7.5rem;
+  }
 }
 
 .__free .__free-text {
@@ -41,41 +66,113 @@ body {
   transform: scale(1.025);
 }
 
-form {
+@media (min-width: 40em) {
+  .__form {
+    width: 50%;
+  }
+}
+
+.__form form {
   width: 20.625rem;
   margin: auto auto 3rem auto;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0px 5px 0px rgba(62, 60, 73, 0.5);
+  /*input:invalid {
+    border-color: $red;
+  }*/
 }
 
-form ul {
+@media (min-width: 40em) {
+  .__form form {
+    width: 34rem;
+  }
+}
+
+.__form form ul {
   margin: 0;
   padding: 1rem;
   list-style: none;
 }
 
-form ul li {
+.__form form ul li {
   width: 17.5rem;
   margin: 1rem auto;
   padding: 0;
+  position: relative;
+  display: flex;
+  flex-flow: wrap row;
 }
 
-form input {
-  width: 100%;
-  padding: 1rem 0;
+.__form form input[type="text"] {
+  appearance: none;
+}
+
+.__form form input {
+  width: 15rem;
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
   font-family: inherit;
+  font-weight: 700;
   border: 1px solid #b9b6d3;
   border-radius: 0.35rem;
 }
 
-form input::placeholder {
+.__form form input::placeholder {
   padding-left: 1rem;
   font-weight: 700;
   font-size: 0.9rem;
 }
 
-form .__submit {
+.__form form input:focus,
+.__form form input :active {
+  background-color: white;
+  border: 1px solid #b9b6d3;
+}
+
+.__form form input:focus:invalid {
+  outline: none;
+}
+
+.__form form input:valid {
+  border-color: #38cc8c;
+}
+
+.__form form input:focus:valid {
+  outline: none;
+}
+
+.__form form .__icon {
+  position: relative;
+}
+
+.__form form input:invalid + .__icon::before {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+  left: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../images/icon-error.svg");
+}
+
+.__form form .error {
+  color: #ff7a7a;
+  padding: 1rem 0 0 3rem;
+  font-style: italic;
+}
+
+.__form form .__error-msg {
+  position: absolute;
+  bottom: -30px;
+  left: 1px;
+  width: 275px;
+  height: 24px;
+  color: #ff7a7a;
+  padding-bottom: 10px;
+}
+
+.__form form .__submit {
   width: 100%;
   height: 3.25rem;
   padding: 0;
@@ -89,11 +186,11 @@ form .__submit {
   box-shadow: 0px 5px 2px #38cc8c;
 }
 
-form .__submit:hover {
+.__form form .__submit:hover {
   transform: scale(1.025);
 }
 
-form .__terms-and-service {
+.__form form .__terms-and-service {
   width: 85%;
   margin: auto;
   font-size: 0.7rem;
@@ -101,13 +198,13 @@ form .__terms-and-service {
   color: #b9b6d3;
 }
 
-form .__terms-and-service a {
+.__form form .__terms-and-service a {
   text-decoration: none;
   color: red;
   font-weight: 700;
 }
 
-form .__terms-and-service a:visited {
+.__form form .__terms-and-service a:visited {
   color: #6055a5;
 }
 
@@ -116,10 +213,24 @@ form .__terms-and-service a:visited {
   margin: auto;
 }
 
+@media (min-width: 40em) {
+  .__description {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .__description .__container {
   display: flex;
   flex-flow: wrap column;
   align-items: center;
+}
+
+@media (min-width: 40em) {
+  .__description .__container {
+    margin: 7rem 0 0 7rem;
+  }
 }
 
 .__description .__container .__title {
@@ -129,11 +240,28 @@ form .__terms-and-service a:visited {
   text-align: center;
 }
 
+@media (min-width: 40em) {
+  .__description .__container .__title {
+    width: 30rem;
+    margin-left: -160px;
+    font-size: 3rem;
+    text-align: left;
+  }
+}
+
 .__description .__container .__text {
   width: 19.625rem;
   margin: 0 auto 4.375rem auto;
   color: white;
   text-align: center;
   opacity: 0.9;
+}
+
+@media (min-width: 40em) {
+  .__description .__container .__text {
+    width: 40rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,16 +2,33 @@
   max-width: 90%;
   margin: auto;
 
+  @include breakpoint-up(medium) {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
   .__container {
     display: flex;
     flex-flow: wrap column;
     align-items: center;
+
+    @include breakpoint-up(medium) {
+      margin: 7rem 0 0 7rem;
+    }
 
     .__title {
       width: 15rem;
       margin-top: 5.25rem;
       color: white;
       text-align: center;
+
+      @include breakpoint-up(medium) {
+        width: 30rem;
+        margin-left: -160px;
+        font-size: 3rem;
+        text-align: left;
+      }
     }
     .__text {
       width: 19.625rem;
@@ -19,6 +36,12 @@
       color: white;
       text-align: center;
       opacity: 0.9;
+
+      @include breakpoint-up(medium) {
+        width: 40rem;
+        font-size: 1.2rem;
+        text-align: left;
+      }
     }
   }
 }

@@ -16,3 +16,16 @@ body {
   background-image: url("/images/bg-intro-mobile.png");
   font-family: "Poppins", sans-serif;
 }
+main {
+  display: flex;
+  flex-flow: wrap column;
+
+  @include breakpoint-up(medium) {
+    flex-flow: wrap row;
+  }
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
