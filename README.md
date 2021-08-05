@@ -35,7 +35,7 @@ Users should be able to:
 - Sass
 - Flexbox
 - Mobile-first workflow
-- JavaScript (Contraint API)
+- JavaScript (Constraint validation API)
 
 ### What I learned
 
