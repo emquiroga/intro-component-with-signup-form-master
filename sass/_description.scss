@@ -14,16 +14,35 @@
     align-items: center;
 
     @include breakpoint-up(medium) {
-      margin: 7rem 0 0 7rem;
+      margin: 6rem 0 0 0.5rem;
+    }
+
+    @include breakpoint-up(large) {
+      margin: 9rem 0 0 5rem;
+    }
+    @include breakpoint-up(xlarge) {
+      margin: 11rem 0 0 7rem;
     }
 
     .__title {
       width: 15rem;
       margin-top: 5.25rem;
       color: white;
+      font-size: 1.6rem;
+      font-weight: 700;
       text-align: center;
 
       @include breakpoint-up(medium) {
+        width: 20rem;
+        font-size: 1.7rem;
+        text-align: center;
+      }
+      @include breakpoint-up(large) {
+        width: 25rem;
+        font-size: 2.6rem;
+        text-align: left;
+      }
+      @include breakpoint-up(xlarge) {
         width: 30rem;
         margin-left: -160px;
         font-size: 3rem;
@@ -38,9 +57,22 @@
       opacity: 0.9;
 
       @include breakpoint-up(medium) {
+        width: 19rem;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.5;
+      }
+      @include breakpoint-up(large) {
+        width: 25rem;
+        font-size: 1.1rem;
+        text-align: left;
+        line-height: 1.6;
+      }
+      @include breakpoint-up(xlarge) {
         width: 40rem;
         font-size: 1.2rem;
         text-align: left;
+        line-height: 2;
       }
     }
   }

@@ -13,8 +13,12 @@ body {
   margin: 0;
   padding: 0;
   background-color: $red;
-  background-image: url("/images/bg-intro-mobile.png");
+  background-image: url("../images/bg-intro-mobile.png");
   font-family: "Poppins", sans-serif;
+
+  @include breakpoint-up(medium) {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
 }
 main {
   display: flex;

@@ -2,11 +2,23 @@
   width: 20.625rem;
   height: 5.625rem;
   margin: auto auto 1.5rem auto;
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   background-color: $blue;
   box-shadow: 0px 5px 0px hsla(249, 10%, 26%, 0.5);
 
   @include breakpoint-up(medium) {
+    width: 23rem;
+    height: 3.75rem;
+    margin-top: 5.5rem;
+  }
+  @include breakpoint-up(large) {
+    width: 30rem;
+    height: 3.75rem;
+    margin-top: 7.5rem;
+  }
+  @include breakpoint-up(xlarge) {
     width: 34rem;
     height: 3.75rem;
     margin-top: 7.5rem;
@@ -14,8 +26,7 @@
 
   .__free-text {
     width: 70%;
-    padding: 1rem 3rem;
-    margin: 0;
+    margin: auto;
     color: white;
     text-align: center;
     opacity: 0.9;
@@ -36,6 +47,12 @@
     box-shadow: 0px 5px 0px hsla(249, 10%, 26%, 0.5);
 
     @include breakpoint-up(medium) {
+      width: 23rem;
+    }
+    @include breakpoint-up(large) {
+      width: 30rem;
+    }
+    @include breakpoint-up(xlarge) {
       width: 34rem;
     }
 
@@ -51,6 +68,16 @@
         position: relative;
         display: flex;
         flex-flow: wrap row;
+
+        @include breakpoint-up(medium) {
+          width: 21rem;
+        }
+        @include breakpoint-up(large) {
+          width: 27rem;
+        }
+        @include breakpoint-up(xlarge) {
+          width: 32rem;
+        }
       }
     }
     input[type="text"] {
@@ -58,7 +85,7 @@
       appearance: none;
     }
     input {
-      width: 15rem;
+      width: 100%;
       position: relative;
       padding: 1rem 0 1rem 2rem;
       font-family: inherit;
@@ -67,7 +94,7 @@
       border-radius: 0.35rem;
 
       &::placeholder {
-        padding-left: 1rem;
+        padding-left: 0.2rem;
         font-weight: 700;
         font-size: 0.9rem;
       }
@@ -77,33 +104,47 @@
         border: 1px solid $grayishBlue;
       }
     }
-    /*input:invalid {
-    border-color: $red;
-  }*/
-    input:focus:invalid {
-      outline: none;
-    }
-    input:valid {
-      border-color: $green;
-    }
+    input:focus:invalid,
     input:focus:valid {
       outline: none;
+    }
+
+    //Validation classes with JS
+
+    input:invalid.error {
+      border-color: $red;
     }
     .__icon {
       position: relative;
     }
-    input:invalid + .__icon::before {
+
+    //Validation classes with JS
+    .__icon::before {
       content: " ";
       position: absolute;
-      top: 1rem;
-      left: -2rem;
+      top: -2.5rem;
+      right: -16.5rem;
       width: 1.5rem;
       height: 1.5rem;
       background-image: url("../images/icon-error.svg");
+
+      @include breakpoint-up(medium) {
+        right: -19.5rem;
+      }
+      @include breakpoint-up(large) {
+        right: -26.5rem;
+      }
+      @include breakpoint-up(xlarge) {
+        right: -30.5rem;
+      }
     }
-    .error {
+    .error-span {
+      width: 100%;
+      margin: 0.25rem 0.5rem 0 0;
       color: $red;
-      padding: 1rem 0 0 3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: end;
       font-style: italic;
     }
     .__error-msg {
@@ -126,7 +167,7 @@
       background-color: $green;
       border-radius: 0.5rem;
       border: none;
-      box-shadow: 0px 5px 2px hsla(154, 59%, 51%, 1);
+      box-shadow: 0px 5px 2px rgb(17, 117, 74);
 
       &:hover {
         transform: scale(1.025);
