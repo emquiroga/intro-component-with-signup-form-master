@@ -34,6 +34,8 @@
 }
 .__free:hover {
   transform: scale(1.025);
+  transition: transform 150ms ease-in;
+  cursor: default;
 }
 .__form {
   @include breakpoint-up(medium) {
@@ -171,6 +173,8 @@
 
       &:hover {
         transform: scale(1.025);
+        transition: transform 150ms ease-in;
+        cursor: pointer;
       }
     }
     .__terms-and-service {

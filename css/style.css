@@ -87,6 +87,8 @@ footer {
 
 .__free:hover {
   transform: scale(1.025);
+  transition: transform 150ms ease-in;
+  cursor: default;
 }
 
 @media (min-width: 40em) {
@@ -257,6 +259,8 @@ footer {
 
 .__form form .__submit:hover {
   transform: scale(1.025);
+  transition: transform 150ms ease-in;
+  cursor: pointer;
 }
 
 .__form form .__terms-and-service {

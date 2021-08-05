@@ -13,13 +13,13 @@ form.addEventListener('submit', function (e) {
     if (!firstName.validity.valid) {
         firstName.classList.add('error');
         firstName.nextElementSibling.classList.add('__icon');
-        spanFirst.innerHTML = 'First name cannot be empty';
+        spanFirst.innerHTML = `${firstName.name} cannot be empty`;
         e.preventDefault();
     }
     if (!lastName.validity.valid) {
         lastName.classList.add('error');
         lastName.nextElementSibling.classList.add('__icon');
-        spanLast.innerHTML = 'Last Name cannot be empty';
+        spanLast.innerHTML = `${lastName.name} cannot be empty`;
         e.preventDefault();
     }
     if (!email.validity.valid) {
@@ -31,7 +31,7 @@ form.addEventListener('submit', function (e) {
     if (!password.validity.valid) {
         password.classList.add('error');
         password.nextElementSibling.classList.add('__icon');
-        spanPass.innerHTML = 'Password cannot be empty';
+        spanPass.innerHTML = `${password.name} cannot be empty`;
         e.preventDefault();
     }
 });
