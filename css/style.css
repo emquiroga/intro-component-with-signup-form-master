@@ -11,7 +11,7 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #ff7a7a;
@@ -37,9 +37,11 @@ main {
 }
 
 footer {
-  position: absolute;
+  position: static;
   left: 0;
   bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .__free {
